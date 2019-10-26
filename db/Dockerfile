@@ -1,0 +1,3 @@
+FROM ssup:latest
+
+COPY . ./

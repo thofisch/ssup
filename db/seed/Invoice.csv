@@ -1,0 +1,2 @@
+Id,ReservationId,Number,DocumentType,MultiInvoiced,TotalAmount,ToPay,IssueDate,DueDate,CreatedDate
+1,1,ABC,Invoice,1,10,5,2018-03-09 23:21:00,2018-03-19 23:21:00,2018-03-09 23:21:02
