@@ -186,7 +186,7 @@ seed_database() {
 
             echo -e "Seeding ${GREEN}${table_name}${RESET} with ${GREEN}${file}${RESET}${dry_run}"
             if [[ -z "${dry_run}" ]]; then
-                /opt/mssql-tools/bin/bcp ${table_name} in ${file} -c -t',' -r "\n" -F 2 -S ${SERVER} -d ${DATABASE} -U sa -P ${SA_PASSWORD}
+                /opt/mssql-tools/bin/bcp "[${table_name}]" in ${file} -c -t',' -r "\n" -F 2 -S ${SERVER} -d ${DATABASE} -U sa -P ${SA_PASSWORD}
             fi
         done < ${order_file}
     else

@@ -1,0 +1,6 @@
+CREATE TABLE [User] (
+    [Id] UNIQUEIDENTIFIER NOT NULL, 
+    [Username] VARCHAR(255) NOT NULL,
+
+    CONSTRAINT [PK_User_Id] PRIMARY KEY ([Id]),
+)
