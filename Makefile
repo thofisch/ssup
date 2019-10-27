@@ -1,5 +1,5 @@
 OWNER				:= thofisch
-REPO				:= pgup
+REPO				:= ssup
 DOCKER_IMAGE_NAME	= $(OWNER)/$(REPO):$(VERSION)
 PROJECT				:= github.com/$(OWNER)/$(REPO)
 VERSION				?= $(shell git describe --tags --always --dirty --match=v* 2> /dev/null || cat $(CURDIR)/.version 2> /dev/null || echo v0)
@@ -9,10 +9,10 @@ M					= $(shell printf "\033[34;1m▶\033[0m")
 all: build
 
 build:
-	@docker build -t pgup .
+	@docker build -t ssup .
 
 run:
-	@docker-compose up --build pgup
+	@docker-compose up --build ssup
 
 db-start:
 	@docker-compose up -d database
